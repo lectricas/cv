@@ -61,180 +61,191 @@
 
 % Workplace header
 \newcommand\CvWorkplaceHeader[5]{\begingroup%
-  \CvRule%
-  \fboxsep0pt%
-  \colorbox{CvWorkplaceHeaderColor}{%
-    \begin{minipage}{\linewidth-2\fboxsep}%
-\CvSmallSkip%
-#1 -- #2 \hfill \textit{#3} at #4 (\href{http://#5/}{#5})%
-\CvSmallSkip%
-    \end{minipage}%
-  }%
-  \CvRule%
-\endgroup%
+	\CvRule%
+	\fboxsep0pt%
+	\colorbox{CvWorkplaceHeaderColor}{%
+		\begin{minipage}{\linewidth-2\fboxsep}%
+			\CvSmallSkip%
+			#1 -- #2 \hfill \textit{#3} at #4 (\href{http://#5/}{#5})%
+			\CvSmallSkip%
+		\end{minipage}%
+	}%
+	\CvRule%
+	\endgroup%
 }
 
 % Workplace description
 \newenvironment{CvWorkplaceDescription}{%
-    \begingroup\setlength\parskip{\CvSmallSkipLength}%
-  }{%
-    \CvSmallSkip\endgroup%
-  }
+	\begingroup\setlength\parskip{\CvSmallSkipLength}%
+}{%
+	\CvSmallSkip\endgroup%
+}
 
 \pagestyle{empty}
 
 \begin{document}
-
-\adjustbox{valign=t}{%
-  \begin{minipage}{3.5cm}%
-    \includegraphics[width=3.5cm]{img/selfie.jpg}
-  \end{minipage}%
-}%
-\hfill%
-\adjustbox{valign=t}{%
-  \begin{minipage}{\linewidth-3.5cm-\CvBigSkipLength}%
-{\bfseries\large Alexey Polusov}\\*
-{\color{CvRuleColor} Last updated on: \today}
-    \CvBigSkip
-    \CvRule
-    \CvSmallSkip
-    \begin{tabularx}{\textwidth}{@{}lX}
-email: & \href{mailto:lectricas@gmail.com}{lectricas@gmail.com} \\
-github: & \href{https://github.com/lectricas/}{https://github.com/lectricas/} \\
-tel.: & +7\,(952)\,377-09-69 \\
-Address: & 1 Tatarskiy Pereulok, apt. 7 \\
-& Saint Petersburg, Russia, 197198 \\
-    \end{tabularx}%
-    \CvSmallSkip
-    \CvRule
-  \end{minipage}%
-}
-
-\CvSectionHeader{Experience}
-
-\CvWorkplaceHeader{October 2018}{Current time}{Lead Android developer}{Firstline Software}{firstlinesoftware.com}
-\begin{CvWorkplaceDescription}
-First project	 was a mid-size app, then I've took a leading position in a distributed team:
-\begin{itemize}[noitemsep]
- \item App for tracking your sugar level
-\begin{itemize}
-\item  app's key feature is a custom view consist of a infinite graph with scaling and Bezier curve. 
- \item main components of a customView were a: Scroller, GestureDetector(switched to manual onTouch handling), logic was adopted from LinearLayoutManager
-\end{itemize}
-\item Russian postal service app
-\begin{itemize}
-\item  This project started a long time ago, and contains a lot of legacy code
-\item  App consists of many different features, including payments, GeoFences, Launcher Widgets, AccountManager, Maps, etc.
- \item My job was to coordinate 5 members Android team and implement features
- \item writing unit tests for new features and support old tests
-\end{itemize}
-\end{itemize}
-
-Key skills \& technologies employed:
-\begin{itemize}[noitemsep]
-  \item Kotlin, Koin, RxPM, Moxy, Room, RxBindings, RxJava, Retrofit, JUnit, Mockito
-\end{itemize}
-\end{CvWorkplaceDescription}
-
-\CvWorkplaceHeader{September 2017}{October 2018}{Android developer}{MobileUp}{mobileup.ru}
-
-\begin{CvWorkplaceDescription}
-I have been taking part in development of several projects, from mid-scale to large ones:
-\begin{itemize}[noitemsep]
-  \item participated in developing a blockchain-oriented application(+ etherium currency involved),
-  \item responsible for all UI logic, I've worked with compound views and animations
-  \item get acquainted with blockchain development
-  \item fixed a few other projects adding some new features,
-  \item configured Bitbucket CI was trying others: Jenkins, AppCenter(we lack some devices), TeamCity\
-\end{itemize}
-
-Key skills \& technologies employed:
-\begin{itemize}[noitemsep]
-  \item Kotlin for sure!,
-  \item RxPm(MVVM like library baked in MobileUp),
-  \item RxJava, Dagger2, Koin, RxBinding, Conductor, web3j for blockchain
-  \item Room, Architecture Components, BiometricPrompt, etc
-\end{itemize}
-\end{CvWorkplaceDescription}
-
-\CvWorkplaceHeader{February 2016}{August 2017}{Android developer}{65apps}{www.65apps.com}
-
-\begin{CvWorkplaceDescription}
-I have been taking part in development of a mid-scale projects as a member of an Android team. I was responsible for developing different app features and support components:
-\begin{itemize}[noitemsep]
-  \item done one middle-size news project from scratch(GP published and successful),
-  \item developed multiply features for several projects,
-  \item bug fixes for projects on "support",
-\end{itemize}
-
-Key skills \& technologies employed:
-\begin{itemize}[noitemsep]
-  \item Java programming in Android Studio,
-  \item CLEAN architecture supported by Dagger 2 and Moxy,
-  \item RxJava, Retrofit, Firebase, Butterknife, etc
-  \item GitFlow
-\end{itemize}
-\end{CvWorkplaceDescription}
-
-\CvRule
-
-\CvSectionHeader{Education}
-
-\CvWorkplaceHeader{2009}{2013}{Bachelor of Information Security}{ISTU}{http://istu.ru/}
-
-\begin{CvWorkplaceDescription}
-During my education, I've been focusing on the following topics:
-\begin{itemize}[noitemsep]
-  \item hidden electronic devices for listen in,
-  \item hardware key interceptor, masked as a USB - PS/2 adapter
-\end{itemize}
-\end{CvWorkplaceDescription}
-\CvRule
-
-\begin{minipage}[t]{.5\linewidth}
-  \CvSectionHeader{Programming Languages}
-
-  \begin{itemize}
-    \item Java, Kotlin, Python
-  \end{itemize}
-
-  \CvSectionHeader{Development Tools \& Technologies}
-
-  \begin{itemize}
- \item CLEAN, RxJava, RxPm, Moxy, Mosby, Koin, Dagger2, Conductor, Retrofit
-\item  JUnit, Mockito
-\item  Realm, Room
-    \item Bitbucket CI, AppCenter, TeamCity
-    \item Heroku, PythonAnywhere, Parse
-   \item Git
-   \item Bash
-   \item some SQL
-  \end{itemize}
-
-  \CvSectionHeader{Hobbies}
-
-  \begin{itemize}
-    \item Sometimes I code to learn new things. 
- \item Interested in graphics and sound in Android system.
-   \item road bike riding, jogging
-  \end{itemize}
-\end{minipage}
-\begin{minipage}[t]{.5\linewidth}
-  \CvSectionHeader{Languages}
-
-  \begin{itemize}
-    \item Russian --- mother tongue.
-    \item English --- TOEFL 93 score a few years ago(trying to sustain the level).
-  \end{itemize}
-
-  \CvSectionHeader{Other Tools \& Technologies}
-
-  \begin{itemize}
-    \item postman
-   \item Word, Excel, Photoshop
-    \item Thinkpad lover, Google Pixel fan
-    \item \LaTeX
-  \end{itemize}
-\end{minipage}
-
+	
+	\adjustbox{valign=t}{%
+		\begin{minipage}{3.5cm}%
+			\includegraphics[width=3.5cm]{img/selfie.jpg}
+		\end{minipage}%
+	}%
+	\hfill%
+	\adjustbox{valign=t}{%
+		\begin{minipage}{\linewidth-3.5cm-\CvBigSkipLength}%
+			{\bfseries\large Alexey Polusov}\\*
+			{\color{CvRuleColor} Last updated on: \today}
+			\CvBigSkip
+			\CvRule
+			\CvSmallSkip
+			\begin{tabularx}{\textwidth}{@{}lX}
+				email: & \href{mailto:lectricas@gmail.com}{lectricas@gmail.com} \\
+				github: & \href{https://github.com/lectricas/}{https://github.com/lectricas/} \\
+				tel.: & +7\,(952)\,377-09-69 \\
+				Address: & 1 Kaluzhskiy Pereulok, apt. 59 \\
+				& Saint Petersburg, Russia, 197198 \\
+			\end{tabularx}%
+			\CvSmallSkip
+			\CvRule
+		\end{minipage}%
+	}
+	
+	\begin{LARGE}  
+		\CvSectionHeader{Experience}
+	\end{LARGE}  
+	
+	\CvWorkplaceHeader{February 2019}{Current time}{Android developer}{Tinkoff}{tinkoff.ru}
+	\begin{CvWorkplaceDescription}
+		Working in a team of highly skilled engineers, I develop the payment section of Tinkoff mobile app. Also, I'm a lecturer and a mentor in Tinkoff Fintech school.
+		\begin{itemize}[noitemsep]
+			\item Development.
+			\begin{itemize}
+				\item Payments by phone/card, QR, shake, Bluetooth. SWIFT and CIS transfers, templates/favorites, bills and many other stuff.
+				\item The oldest and biggest part of the Tinkoff mobile app.
+			\end{itemize}
+			
+			\item Fintech school.
+			\begin{itemize}
+				\item I participate as a lecturer and a mentor in two online schools for Android developers. 
+				\item I've given a lectures on Dagger2, and reviewed Android homework. Some students now work in Tinkoff. 
+			\end{itemize}
+		\end{itemize}
+		
+		Key skills \& technologies employed:
+		\begin{itemize}[noitemsep]
+			\item Kotlin, Java, Gradle, UI automation, public speech, code review, carefulness, responsibility, time management. 
+		\end{itemize}
+		
+		
+	\end{CvWorkplaceDescription}
+	
+	\CvWorkplaceHeader{October 2018}{February 2019}{Lead Android developer}{Firstline Software}{firstlinesoftware.com}
+	\begin{CvWorkplaceDescription}
+		First project was a mid-size app, then I've took a leading position in a distributed team:
+		\begin{itemize}[noitemsep]
+			\item App for tracking your sugar level
+			\begin{itemize}
+				\item  app's key feature is a custom view consist of a infinite graph with scaling and Bezier curve. 
+				\item main components of a customView were a: Scroller, GestureDetector(switched to manual onTouch handling), logic was adopted from LinearLayoutManager
+			\end{itemize}
+			\item Russian postal service app
+			\begin{itemize}
+				\item  This project started a long time ago, and contains a lot of legacy code
+				\item  App consists of many different features, including payments, GeoFences, Launcher Widgets, AccountManager, Maps, etc.
+				\item My job was to coordinate 5 members Android team and implement features
+				\item writing unit tests for new features and support old tests
+			\end{itemize}
+		\end{itemize}
+		
+		Key skills \& technologies employed:
+		\begin{itemize}[noitemsep]
+			\item Kotlin, Koin, RxPM, Moxy, Room, RxBindings, RxJava, Retrofit, JUnit, Mockito
+		\end{itemize}
+	\end{CvWorkplaceDescription}
+	
+	\CvWorkplaceHeader{September 2017}{October 2018}{Android developer}{MobileUp}{mobileup.ru}
+	
+	\begin{CvWorkplaceDescription}
+		I have been taking part in development of several projects, from mid-scale to large ones
+		
+		Key skills \& technologies employed:
+		\begin{itemize}[noitemsep]
+			\item Kotlin,
+			\item RxPm(MVVM like library baked in MobileUp),
+			\item RxJava, Dagger2, Koin, RxBinding, Conductor, web3j for blockchain
+			\item Room, Architecture Components, BiometricPrompt, etc
+		\end{itemize}
+	\end{CvWorkplaceDescription}
+	
+	\CvWorkplaceHeader{February 2016}{August 2017}{Android developer}{65apps}{www.65apps.com}
+	
+	\begin{CvWorkplaceDescription}
+		I have been taking part in development of a mid-scale projects as a member of an Android team. I was responsible for developing different app features and support components.
+	\end{CvWorkplaceDescription}
+	
+	\begin{LARGE}  
+		\CvSectionHeader{Education}
+	\end{LARGE} 
+	
+	
+	\CvWorkplaceHeader{2017}{Current time}{Self education}{Stepik, Coursera, Yandex praktikum, CSC courses}{stepik.org}
+	
+	\begin{CvWorkplaceDescription}
+		During this period, I was mainly focused on mathematics and programming.
+		Here is the list of courses that I've completed:
+		\begin{itemize}[noitemsep]
+			\item Введение в математический анализ. Онлайн программа - Stepik, CSC
+			\item Линейная Алгебра Stepik, Онлайн программа - Stepik, CSC
+			\item Основы дискретной математики, Онлайн программа - Stepik, CSC
+			\item Теория вероятностей, Онлайн программа - Stepik, CSC (almost done)
+			\item Ликбез по дискретной математике, Stepik
+			\item Программирование на языке C++, Stepik (almost done)
+			\item Алгоритмы: теория и практика. Методы, Stepik
+			\item Быстрый старт в спортивное программирование, Stepik, МФТИ.
+			\item Algorithms, part1,Princeton, Coursera. 
+			\item Базовые алгоритмы Yandex praktikum.
+		\end{itemize}
+	\end{CvWorkplaceDescription}
+	
+	\CvWorkplaceHeader{2009}{2013}{Bachelor of Information Security}{ISTU}{istu.ru}
+	
+	\begin{CvWorkplaceDescription}
+		During my education, I've been focusing on the following topics:
+		\begin{itemize}[noitemsep]
+			\item hidden electronic devices for listen in,
+			\item hardware key interceptor, masked as a USB - PS/2 adapter
+		\end{itemize}
+	\end{CvWorkplaceDescription}
+	\CvRule
+	
+	\begin{minipage}[t]{.5\linewidth}
+		\CvSectionHeader{Programming Languages}
+		
+		\begin{itemize}
+			\item Java, Kotlin, C++
+		\end{itemize}
+		
+		\CvSectionHeader{Development Tools \& Technologies}
+		
+		\begin{itemize}
+			\item RxJava, Dagger2, Linux, Charles, Gradle
+		\end{itemize}
+		
+		\CvSectionHeader{Hobbies}
+		
+		\begin{itemize}
+			\item road/gravel cycling, swimming, solving Stepik
+		\end{itemize}
+	\end{minipage}
+	\begin{minipage}[t]{.5\linewidth}
+		\CvSectionHeader{Languages}
+		
+		\begin{itemize}
+			\item Russian --- mother tongue.
+			\item English --- TOEFL 93 score.
+		\end{itemize}
+		
+		
+	\end{minipage}
+	
 \end{document}
